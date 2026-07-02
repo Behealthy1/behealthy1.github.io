@@ -1,1 +1,198 @@
-<img src="https://images.pexels.com/photos/11894617/pexels-photo-11894617.jpeg" alt="Hijama thérapeutique">
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be Healthy | لمسة شفاء</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            color: #2c3e3a;
+            background-color: #faf8f5;
+            line-height: 1.6;
+        }
+        .hero {
+            position: relative;
+            height: 90vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(20,60,50,0.6), rgba(20,60,50,0.7)),
+                        url('https://images.pexels.com/photos/8312830/pexels-photo-8312830.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+        .hero h1 { font-size: 3em; letter-spacing: 1px; margin-bottom: 10px; }
+        .hero .arabic { font-size: 1.6em; direction: rtl; margin-bottom: 20px; font-weight: 300; }
+        .hero p { font-size: 1.2em; max-width: 600px; opacity: 0.95; }
+        .hero .btn {
+            margin-top: 30px;
+            display: inline-block;
+            background: #ffffff;
+            color: #1f5c4f;
+            padding: 14px 34px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            transition: transform 0.2s ease;
+        }
+        .hero .btn:hover { transform: translateY(-3px); }
+        section { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.2em; color: #1f5c4f; }
+        .section-title .line { width: 60px; height: 3px; background: #c9a24b; margin: 15px auto 0; }
+        .about { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+        .about img {
+            flex: 1 1 350px;
+            width: 100%;
+            max-width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .about-text { flex: 1 1 350px; }
+        .about-text p { font-size: 1.05em; color: #4a4a4a; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            transition: transform 0.25s ease;
+        }
+        .service-card:hover { transform: translateY(-6px); }
+        .service-card img { width: 100%; height: 180px; object-fit: cover; }
+        .service-card .content { padding: 20px; border-right: 4px solid #c9a24b; }
+        .service-fr { font-weight: bold; font-size: 1.15em; color: #1f5c4f; }
+        .service-ar { direction: rtl; font-size: 1.05em; margin-top: 6px; color: #666; }
+        .quote { background: #1f5c4f; color: white; text-align: center; padding: 70px 20px; }
+        .quote p { font-size: 1.5em; font-style: italic; max-width: 700px; margin: 0 auto 10px; }
+        .quote .arabic { direction: rtl; font-size: 1.3em; opacity: 0.9; }
+        .contact-box {
+            text-align: center;
+            background: white;
+            border-radius: 16px;
+            padding: 50px 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .contact-box a {
+            display: inline-block;
+            margin-top: 15px;
+            background: #1f5c4f;
+            color: white;
+            text-decoration: none;
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; }
+        @media (max-width: 600px) { .hero h1 { font-size: 2.2em; } }
+    </style>
+</head>
+<body>
+
+    <div class="hero">
+        <h1>Be Healthy</h1>
+        <div class="arabic">لمسة شفاء</div>
+        <p>Soins infirmiers & thérapies naturelles à domicile, pour prendre soin de vous avec douceur et professionnalisme.</p>
+        <a href="tel:+212647932044" class="btn">Prendre rendez-vous</a>
+    </div>
+
+    <section>
+        <div class="section-title">
+            <h2>À propos</h2>
+            <div class="line"></div>
+        </div>
+        <div class="about">
+            <img src="https://images.pexels.com/photos/7345465/pexels-photo-7345465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Soins à domicile">
+            <div class="about-text">
+                <p>
+                    Infirmière diplômée d'État de l'Institut de Formation aux Carrières de Santé,
+                    je vous accompagne avec des soins infirmiers professionnels ainsi que des thérapies
+                    naturelles (hijama) pour votre santé et votre bien-être.
+                </p>
+                <p style="margin-top:15px;">
+                    Mon approche allie rigueur médicale et douceur, pour un accompagnement personnalisé
+                    à domicile, dans le respect et le confort de chacun.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background:#f0ede6;">
+        <div class="section-title">
+            <h2>Nos Services</h2>
+            <div class="line"></div>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <img src="https://images.pexels.com/photos/7446776/pexels-photo-7446776.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Soins infirmiers">
+                <div class="content">
+                    <div class="service-fr">Soins infirmiers</div>
+                    <div class="service-ar">العلاجات التمريضية</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.pexels.com/photos/11894617/pexels-photo-11894617.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hijama thérapeutique">
+                <div class="content">
+                    <div class="service-fr">Hijama thérapeutique</div>
+                    <div class="service-ar">الحجامة العلاجية</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.pexels.com/photos/8312867/pexels-photo-8312867.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hijama relaxante">
+                <div class="content">
+                    <div class="service-fr">Hijama relaxante</div>
+                    <div class="service-ar">الحجامة الاسترخائية</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://images.pexels.com/photos/8312870/pexels-photo-8312870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cupping therapy">
+                <div class="content">
+                    <div class="service-fr">Cupping therapy</div>
+                    <div class="service-ar">العلاج بالكؤوس</div>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-digestive-system-163714_1280.jpg" alt="Colopathie">
+                <div class="content">
+                    <div class="service-fr">Prise en charge de la colopathie</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote">
+        <p>"Prendre soin de son corps, c'est prendre soin de son âme."</p>
+        <div class="arabic">العناية بالجسد عناية بالروح</div>
+    </div>
+
+    <section>
+        <div class="section-title">
+            <h2>Contact</h2>
+            <div class="line"></div>
+        </div>
+        <div class="contact-box">
+            <p style="font-size:1.2em;">Pour une consultation ou une prise de rendez-vous à domicile :</p>
+            <a href="tel:+212647932044">📞 06 47 93 20 44</a>
+            <p style="margin-top:20px; color:#888;">Maroc</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Be Healthy - لمسة شفاء. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
