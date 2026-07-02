@@ -12,13 +12,12 @@
             background-color: #faf8f5;
             line-height: 1.6;
         }
-
         .hero {
             position: relative;
             height: 90vh;
             min-height: 500px;
             background: linear-gradient(rgba(20,60,50,0.55), rgba(20,60,50,0.65)),
-                        url('https://picsum.photos/seed/wellnesshero/1600/900') center/cover no-repeat;
+                        url('https://loremflickr.com/1600/900/spa,wellness,relaxation') center/cover no-repeat;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -27,22 +26,9 @@
             color: white;
             padding: 20px;
         }
-        .hero h1 {
-            font-size: 3em;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-        .hero .arabic {
-            font-size: 1.6em;
-            direction: rtl;
-            margin-bottom: 20px;
-            font-weight: 300;
-        }
-        .hero p {
-            font-size: 1.2em;
-            max-width: 600px;
-            opacity: 0.95;
-        }
+        .hero h1 { font-size: 3em; letter-spacing: 1px; margin-bottom: 10px; }
+        .hero .arabic { font-size: 1.6em; direction: rtl; margin-bottom: 20px; font-weight: 300; }
+        .hero p { font-size: 1.2em; max-width: 600px; opacity: 0.95; }
         .hero .btn {
             margin-top: 30px;
             display: inline-block;
@@ -56,33 +42,11 @@
             transition: transform 0.2s ease;
         }
         .hero .btn:hover { transform: translateY(-3px); }
-
-        section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .section-title h2 {
-            font-size: 2.2em;
-            color: #1f5c4f;
-        }
-        .section-title .line {
-            width: 60px;
-            height: 3px;
-            background: #c9a24b;
-            margin: 15px auto 0;
-        }
-
-        .about {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
+        section { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+        .section-title { text-align: center; margin-bottom: 50px; }
+        .section-title h2 { font-size: 2.2em; color: #1f5c4f; }
+        .section-title .line { width: 60px; height: 3px; background: #c9a24b; margin: 15px auto 0; }
+        .about { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
         .about img {
             flex: 1 1 350px;
             width: 100%;
@@ -90,14 +54,8 @@
             border-radius: 16px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
-        .about-text {
-            flex: 1 1 350px;
-        }
-        .about-text p {
-            font-size: 1.05em;
-            color: #4a4a4a;
-        }
-
+        .about-text { flex: 1 1 350px; }
+        .about-text p { font-size: 1.05em; color: #4a4a4a; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -111,45 +69,13 @@
             transition: transform 0.25s ease;
         }
         .service-card:hover { transform: translateY(-6px); }
-        .service-card img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-        }
-        .service-card .content {
-            padding: 20px;
-            border-right: 4px solid #c9a24b;
-        }
-        .service-fr {
-            font-weight: bold;
-            font-size: 1.15em;
-            color: #1f5c4f;
-        }
-        .service-ar {
-            direction: rtl;
-            font-size: 1.05em;
-            margin-top: 6px;
-            color: #666;
-        }
-
-        .quote {
-            background: #1f5c4f;
-            color: white;
-            text-align: center;
-            padding: 70px 20px;
-        }
-        .quote p {
-            font-size: 1.5em;
-            font-style: italic;
-            max-width: 700px;
-            margin: 0 auto 10px;
-        }
-        .quote .arabic {
-            direction: rtl;
-            font-size: 1.3em;
-            opacity: 0.9;
-        }
-
+        .service-card img { width: 100%; height: 160px; object-fit: cover; }
+        .service-card .content { padding: 20px; border-right: 4px solid #c9a24b; }
+        .service-fr { font-weight: bold; font-size: 1.15em; color: #1f5c4f; }
+        .service-ar { direction: rtl; font-size: 1.05em; margin-top: 6px; color: #666; }
+        .quote { background: #1f5c4f; color: white; text-align: center; padding: 70px 20px; }
+        .quote p { font-size: 1.5em; font-style: italic; max-width: 700px; margin: 0 auto 10px; }
+        .quote .arabic { direction: rtl; font-size: 1.3em; opacity: 0.9; }
         .contact-box {
             text-align: center;
             background: white;
@@ -168,17 +94,8 @@
             font-weight: bold;
             font-size: 1.1em;
         }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #888;
-            font-size: 0.9em;
-        }
-
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2.2em; }
-        }
+        footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; }
+        @media (max-width: 600px) { .hero h1 { font-size: 2.2em; } }
     </style>
 </head>
 <body>
@@ -196,7 +113,7 @@
             <div class="line"></div>
         </div>
         <div class="about">
-            <img src="https://picsum.photos/seed/nursecare/500/500" alt="Soins infirmiers">
+            <img src="https://loremflickr.com/500/500/nurse,healthcare" alt="Soins infirmiers">
             <div class="about-text">
                 <p>
                     Infirmière diplômée d'État de l'Institut de Formation aux Carrières de Santé,
@@ -218,34 +135,62 @@
         </div>
         <div class="services-grid">
             <div class="service-card">
-                <img src="https://picsum.photos/seed/service1/400/300" alt="Soins infirmiers">
+                <img src="https://loremflickr.com/400/300/nurse,medical" alt="Soins infirmiers">
                 <div class="content">
                     <div class="service-fr">Soins infirmiers</div>
                     <div class="service-ar">العلاجات التمريضية</div>
                 </div>
             </div>
             <div class="service-card">
-                <img src="https://picsum.photos/seed/service2/400/300" alt="Hijama thérapeutique">
+                <img src="https://loremflickr.com/400/300/cupping,therapy" alt="Hijama thérapeutique">
                 <div class="content">
                     <div class="service-fr">Hijama thérapeutique</div>
                     <div class="service-ar">الحجامة العلاجية</div>
                 </div>
             </div>
             <div class="service-card">
-                <img src="https://picsum.photos/seed/service3/400/300" alt="Hijama relaxante">
+                <img src="https://loremflickr.com/400/300/massage,relax" alt="Hijama relaxante">
                 <div class="content">
                     <div class="service-fr">Hijama relaxante</div>
                     <div class="service-ar">الحجامة الاسترخائية</div>
                 </div>
             </div>
             <div class="service-card">
-                <img src="https://picsum.photos/seed/service4/400/300" alt="Cupping therapy">
+                <img src="https://loremflickr.com/400/300/cupping,glass" alt="Cupping therapy">
                 <div class="content">
                     <div class="service-fr">Cupping therapy</div>
                     <div class="service-ar">العلاج بالكؤوس</div>
                 </div>
             </div>
             <div class="service-card">
-                <img src="https://picsum.photos/seed/service5/400/300" alt="Colopathie">
+                <img src="https://loremflickr.com/400/300/herbal,natural" alt="Colopathie">
                 <div class="content">
-                    <div class="service-fr">Prise en charge de
+                    <div class="service-fr">Prise en charge de la colopathie</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="quote">
+        <p>"Prendre soin de son corps, c'est prendre soin de son âme."</p>
+        <div class="arabic">العناية بالجسد عناية بالروح</div>
+    </div>
+
+    <section>
+        <div class="section-title">
+            <h2>Contact</h2>
+            <div class="line"></div>
+        </div>
+        <div class="contact-box">
+            <p style="font-size:1.2em;">Pour une consultation ou une prise de rendez-vous à domicile :</p>
+            <a href="tel:+212647932044">📞 06 47 93 20 44</a>
+            <p style="margin-top:20px; color:#888;">Maroc</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2026 Be Healthy - لمسة شفاء. Tous droits réservés.
+    </footer>
+
+</body>
+</html>
