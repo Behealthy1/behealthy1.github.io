@@ -55,8 +55,8 @@
         position: relative;
         height: 100vh;
         min-height: 640px;
-        background: linear-gradient(rgba(10,28,23,0.55), rgba(10,28,23,0.75)),
-                    url('https://images.pexels.com/photos/8312830/pexels-photo-8312830.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover fixed no-repeat;
+        background: linear-gradient(rgba(30,20,20,0.45), rgba(30,20,20,0.6)),
+                    url('https://images.pexels.com/photos/6724589/pexels-photo-6724589.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover fixed no-repeat;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -65,6 +65,7 @@
         color: #fff;
         padding: 20px;
     }
+    .hero .flourish { font-size: 1.4em; color: #e8b4b8; margin-bottom: 14px; letter-spacing: 6px; }
     .hero .eyebrow {
         letter-spacing: 4px;
         text-transform: uppercase;
@@ -75,7 +76,7 @@
     }
     .hero h1 { font-size: 4.2em; font-weight: 600; margin-bottom: 6px; letter-spacing: 1px; }
     .hero .arabic { font-size: 1.8em; direction: rtl; margin: 14px 0 26px; font-weight: 500; color: #eee3c8; }
-    .hero p { font-size: 1.15em; max-width: 560px; opacity: 0.92; font-weight: 300; margin-bottom: 40px; }
+    .hero p { font-size: 1.15em; max-width: 560px; opacity: 0.95; font-weight: 300; margin-bottom: 40px; }
     .btn-lux {
         display: inline-block;
         border: 1px solid #cba135;
@@ -102,7 +103,11 @@
         color: #cba135; font-weight: 500; margin-bottom: 14px; display: block;
     }
     .section-title h2 { font-size: 2.6em; color: #0f241e; font-weight: 600; }
-    .section-title .line { width: 50px; height: 1px; background: #cba135; margin: 22px auto 0; }
+    .section-title .line { width: 50px; height: 1px; background: #e8b4b8; margin: 22px auto 0; position: relative; }
+    .section-title .line::after {
+        content: '✦'; position: absolute; top: -9px; left: 50%; transform: translateX(-50%);
+        color: #cba135; font-size: 0.8em; background: #fbfaf7; padding: 0 8px;
+    }
 
     .about { display: flex; align-items: center; gap: 70px; flex-wrap: wrap; }
     .about-img-wrap { flex: 1 1 380px; position: relative; }
@@ -114,16 +119,19 @@
         content: '';
         position: absolute; top: 20px; left: 20px;
         width: 100%; max-width: 420px; height: 480px;
-        border: 1px solid #cba135;
+        border: 1px solid #e8b4b8;
         z-index: -1;
     }
     .about-text { flex: 1 1 380px; }
     .about-text p { font-size: 1.02em; color: #555; margin-bottom: 20px; font-weight: 300; }
     .signature { font-family: 'Playfair Display', serif; font-style: italic; color: #0f241e; font-size: 1.3em; margin-top: 24px; }
+    .signature::before { content: '❀ '; color: #e8b4b8; }
 
     .services-bg { background: #0f241e; }
     .services-bg .section-title h2 { color: #fff; }
     .services-bg .eyebrow { color: #cba135; }
+    .services-bg .line { background: #cba135; }
+    .services-bg .line::after { background: #0f241e; }
     .services-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -147,7 +155,6 @@
     .service-fr { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.3em; color: #fff; }
     .service-ar { direction: rtl; font-size: 1em; margin-top: 8px; color: #cba135; }
 
-    /* GALERIE */
     .gallery-section { background: #fbfaf7; }
     .gallery-grid {
         display: grid;
@@ -170,9 +177,9 @@
     .quote {
         text-align: center;
         padding: 120px 6%;
-        background: #fbfaf7;
+        background: #fdf6f2;
     }
-    .quote .mark { font-family: 'Playfair Display', serif; font-size: 3em; color: #cba135; }
+    .quote .mark { font-family: 'Playfair Display', serif; font-size: 3em; color: #e8b4b8; }
     .quote p { font-family: 'Playfair Display', serif; font-size: 1.7em; font-style: italic; color: #0f241e; max-width: 700px; margin: 0 auto 16px; }
     .quote .arabic { direction: rtl; font-size: 1.3em; color: #888; }
 
@@ -181,10 +188,14 @@
     .contact-section p.lead { font-size: 1.05em; opacity: 0.85; max-width: 500px; margin: 0 auto 40px; font-weight: 300; }
     .contact-section a.phone {
         display: inline-block; font-family: 'Playfair Display', serif; font-size: 1.6em;
-        color: #cba135; text-decoration: none; letter-spacing: 1px; margin-bottom: 30px;
+        color: #cba135; text-decoration: none; letter-spacing: 1px; margin-bottom: 20px;
         border-bottom: 1px solid rgba(203,161,53,0.4); padding-bottom: 8px;
     }
-    .contact-section .location { font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; }
+    .contact-section .location {
+        font-size: 0.9em; letter-spacing: 2px; text-transform: uppercase; opacity: 0.75;
+        margin-top: 10px;
+    }
+    .contact-section .location span { color: #e8b4b8; }
 
     footer { text-align: center; padding: 36px; background: #0a1c17; color: #7c8b85; font-size: 0.78em; letter-spacing: 1px; }
 
@@ -208,6 +219,7 @@
 </nav>
 
 <div class="hero">
+    <div class="flourish">❀</div>
     <div class="eyebrow">Soins & Bien-être à domicile</div>
     <h1>Be Healthy</h1>
     <div class="arabic">لمسة شفاء</div>
@@ -234,9 +246,9 @@
             </p>
             <p>
                 Mon approche allie précision médicale et douceur humaine, dans le cadre apaisant
-                de votre propre domicile.
+                de votre propre domicile, à Marrakech.
             </p>
-            <div class="signature">— Be Healthy</div>
+            <div class="signature">Be Healthy</div>
         </div>
     </div>
 </section>
@@ -327,7 +339,7 @@
     </div>
     <p class="lead">Pour une consultation ou une prise de rendez-vous à domicile, contactez-nous directement.</p>
     <a href="tel:+212647932044" class="phone">06 47 93 20 44</a>
-    <div class="location">Maroc</div>
+    <div class="location">Marrakech <span>•</span> Maroc</div>
 </section>
 
 <footer>
