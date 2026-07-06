@@ -1,198 +1,302 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Be Healthy | لمسة شفاء</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            color: #2c3e3a;
-            background-color: #faf8f5;
-            line-height: 1.6;
-        }
-        .hero {
-            position: relative;
-            height: 90vh;
-            min-height: 500px;
-            background: linear-gradient(rgba(20,60,50,0.6), rgba(20,60,50,0.7)),
-                        url('https://images.pexels.com/photos/8312830/pexels-photo-8312830.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover no-repeat;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-        .hero h1 { font-size: 3em; letter-spacing: 1px; margin-bottom: 10px; }
-        .hero .arabic { font-size: 1.6em; direction: rtl; margin-bottom: 20px; font-weight: 300; }
-        .hero p { font-size: 1.2em; max-width: 600px; opacity: 0.95; }
-        .hero .btn {
-            margin-top: 30px;
-            display: inline-block;
-            background: #ffffff;
-            color: #1f5c4f;
-            padding: 14px 34px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 0.5px;
-            transition: transform 0.2s ease;
-        }
-        .hero .btn:hover { transform: translateY(-3px); }
-        section { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
-        .section-title { text-align: center; margin-bottom: 50px; }
-        .section-title h2 { font-size: 2.2em; color: #1f5c4f; }
-        .section-title .line { width: 60px; height: 3px; background: #c9a24b; margin: 15px auto 0; }
-        .about { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
-        .about img {
-            flex: 1 1 350px;
-            width: 100%;
-            max-width: 400px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-        .about-text { flex: 1 1 350px; }
-        .about-text p { font-size: 1.05em; color: #4a4a4a; }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-        .service-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-            transition: transform 0.25s ease;
-        }
-        .service-card:hover { transform: translateY(-6px); }
-        .service-card img { width: 100%; height: 180px; object-fit: cover; }
-        .service-card .content { padding: 20px; border-right: 4px solid #c9a24b; }
-        .service-fr { font-weight: bold; font-size: 1.15em; color: #1f5c4f; }
-        .service-ar { direction: rtl; font-size: 1.05em; margin-top: 6px; color: #666; }
-        .quote { background: #1f5c4f; color: white; text-align: center; padding: 70px 20px; }
-        .quote p { font-size: 1.5em; font-style: italic; max-width: 700px; margin: 0 auto 10px; }
-        .quote .arabic { direction: rtl; font-size: 1.3em; opacity: 0.9; }
-        .contact-box {
-            text-align: center;
-            background: white;
-            border-radius: 16px;
-            padding: 50px 30px;
-            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-        }
-        .contact-box a {
-            display: inline-block;
-            margin-top: 15px;
-            background: #1f5c4f;
-            color: white;
-            text-decoration: none;
-            padding: 14px 36px;
-            border-radius: 30px;
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-        footer { text-align: center; padding: 30px; color: #888; font-size: 0.9em; }
-        @media (max-width: 600px) { .hero h1 { font-size: 2.2em; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Be Healthy | لمسة شفاء</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+        font-family: 'Poppins', sans-serif;
+        color: #2b2b2b;
+        background-color: #fbfaf7;
+        line-height: 1.7;
+        font-weight: 300;
+    }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    /* NAV */
+    nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 22px 6%;
+        background: rgba(15,36,30,0.0);
+        transition: background 0.4s ease, padding 0.4s ease;
+    }
+    nav.scrolled { background: rgba(15,36,30,0.92); padding: 14px 6%; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .logo { font-family: 'Playfair Display', serif; color: #fff; font-size: 1.4em; letter-spacing: 1px; }
+    .logo span { color: #cba135; }
+    .nav-links { display: flex; gap: 34px; }
+    .nav-links a {
+        color: #f2efe9;
+        text-decoration: none;
+        font-size: 0.82em;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 400;
+        position: relative;
+        padding-bottom: 4px;
+    }
+    .nav-links a::after {
+        content: '';
+        position: absolute; bottom: 0; left: 0;
+        width: 0; height: 1px; background: #cba135;
+        transition: width 0.3s ease;
+    }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* HERO */
+    .hero {
+        position: relative;
+        height: 100vh;
+        min-height: 640px;
+        background: linear-gradient(rgba(10,28,23,0.55), rgba(10,28,23,0.75)),
+                    url('https://images.pexels.com/photos/8312830/pexels-photo-8312830.jpeg?auto=compress&cs=tinysrgb&w=1920') center/cover fixed no-repeat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 20px;
+    }
+    .hero .eyebrow {
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-size: 0.78em;
+        color: #cba135;
+        margin-bottom: 22px;
+        font-weight: 500;
+    }
+    .hero h1 { font-size: 4.2em; font-weight: 600; margin-bottom: 6px; letter-spacing: 1px; }
+    .hero .arabic { font-size: 1.8em; direction: rtl; margin: 14px 0 26px; font-weight: 500; color: #eee3c8; }
+    .hero p { font-size: 1.15em; max-width: 560px; opacity: 0.92; font-weight: 300; margin-bottom: 40px; }
+    .btn-lux {
+        display: inline-block;
+        border: 1px solid #cba135;
+        color: #fff;
+        padding: 16px 44px;
+        text-decoration: none;
+        letter-spacing: 2px;
+        font-size: 0.8em;
+        text-transform: uppercase;
+        transition: all 0.35s ease;
+        background: transparent;
+    }
+    .btn-lux:hover { background: #cba135; border-color: #cba135; color: #0f241e; }
+    .scroll-hint {
+        position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+        color: #cba135; font-size: 0.7em; letter-spacing: 3px; text-transform: uppercase;
+        opacity: 0.8;
+    }
+
+    /* SECTIONS */
+    section { max-width: 1100px; margin: 0 auto; padding: 130px 6%; }
+    .section-title { text-align: center; margin-bottom: 70px; }
+    .section-title .eyebrow {
+        letter-spacing: 4px; text-transform: uppercase; font-size: 0.75em;
+        color: #cba135; font-weight: 500; margin-bottom: 14px; display: block;
+    }
+    .section-title h2 { font-size: 2.6em; color: #0f241e; font-weight: 600; }
+    .section-title .line { width: 50px; height: 1px; background: #cba135; margin: 22px auto 0; }
+
+    /* ABOUT */
+    .about { display: flex; align-items: center; gap: 70px; flex-wrap: wrap; }
+    .about-img-wrap { flex: 1 1 380px; position: relative; }
+    .about-img-wrap img {
+        width: 100%; max-width: 420px; height: 480px; object-fit: cover;
+        display: block;
+    }
+    .about-img-wrap::before {
+        content: '';
+        position: absolute; top: 20px; left: 20px;
+        width: 100%; max-width: 420px; height: 480px;
+        border: 1px solid #cba135;
+        z-index: -1;
+    }
+    .about-text { flex: 1 1 380px; }
+    .about-text p { font-size: 1.02em; color: #555; margin-bottom: 20px; font-weight: 300; }
+    .signature { font-family: 'Playfair Display', serif; font-style: italic; color: #0f241e; font-size: 1.3em; margin-top: 24px; }
+
+    /* SERVICES */
+    .services-bg { background: #0f241e; }
+    .services-bg .section-title h2 { color: #fff; }
+    .services-bg .eyebrow { color: #cba135; }
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2px;
+        background: rgba(255,255,255,0.08);
+    }
+    .service-card {
+        background: #0f241e;
+        position: relative;
+        overflow: hidden;
+        min-height: 320px;
+        display: flex;
+        align-items: flex-end;
+    }
+    .service-card img {
+        position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+        transition: transform 0.6s ease; opacity: 0.55;
+    }
+    .service-card:hover img { transform: scale(1.08); opacity: 0.35; }
+    .service-card .content { position: relative; z-index: 2; padding: 30px; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.65)); }
+    .service-fr { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 1.3em; color: #fff; }
+    .service-ar { direction: rtl; font-size: 1em; margin-top: 8px; color: #cba135; }
+
+    /* QUOTE */
+    .quote {
+        text-align: center;
+        padding: 120px 6%;
+        background: #fbfaf7;
+    }
+    .quote .mark { font-family: 'Playfair Display', serif; font-size: 3em; color: #cba135; }
+    .quote p { font-family: 'Playfair Display', serif; font-size: 1.7em; font-style: italic; color: #0f241e; max-width: 700px; margin: 0 auto 16px; }
+    .quote .arabic { direction: rtl; font-size: 1.3em; color: #888; }
+
+    /* CONTACT */
+    .contact-section { background: #0f241e; color: #fff; text-align: center; padding: 130px 6%; }
+    .contact-section .section-title h2 { color: #fff; }
+    .contact-section p.lead { font-size: 1.05em; opacity: 0.85; max-width: 500px; margin: 0 auto 40px; font-weight: 300; }
+    .contact-section a.phone {
+        display: inline-block; font-family: 'Playfair Display', serif; font-size: 1.6em;
+        color: #cba135; text-decoration: none; letter-spacing: 1px; margin-bottom: 30px;
+        border-bottom: 1px solid rgba(203,161,53,0.4); padding-bottom: 8px;
+    }
+    .contact-section .location { font-size: 0.85em; letter-spacing: 2px; text-transform: uppercase; opacity: 0.6; }
+
+    footer { text-align: center; padding: 36px; background: #0a1c17; color: #7c8b85; font-size: 0.78em; letter-spacing: 1px; }
+
+    @media (max-width: 700px) {
+        .hero h1 { font-size: 2.6em; }
+        .nav-links { display: none; }
+        section { padding: 90px 6%; }
+    }
+</style>
 </head>
 <body>
 
-    <div class="hero">
-        <h1>Be Healthy</h1>
-        <div class="arabic">لمسة شفاء</div>
-        <p>Soins infirmiers & thérapies naturelles à domicile, pour prendre soin de vous avec douceur et professionnalisme.</p>
-        <a href="tel:+212647932044" class="btn">Prendre rendez-vous</a>
+<nav id="mainNav">
+    <div class="logo">Be Healthy <span>|</span> لمسة شفاء</div>
+    <div class="nav-links">
+        <a href="#about">À propos</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
     </div>
+</nav>
 
-    <section>
-        <div class="section-title">
-            <h2>À propos</h2>
-            <div class="line"></div>
-        </div>
-        <div class="about">
+<div class="hero">
+    <div class="eyebrow">Soins & Bien-être à domicile</div>
+    <h1>Be Healthy</h1>
+    <div class="arabic">لمسة شفاء</div>
+    <p>Une approche d'excellence entre soins infirmiers professionnels et thérapies naturelles, pour révéler votre équilibre intérieur.</p>
+    <a href="tel:+212647932044" class="btn-lux">Prendre rendez-vous</a>
+    <div class="scroll-hint">Découvrir ↓</div>
+</div>
+
+<section id="about">
+    <div class="section-title">
+        <span class="eyebrow">Votre praticienne</span>
+        <h2>À propos</h2>
+        <div class="line"></div>
+    </div>
+    <div class="about">
+        <div class="about-img-wrap">
             <img src="https://images.pexels.com/photos/7345465/pexels-photo-7345465.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Soins à domicile">
-            <div class="about-text">
-                <p>
-                    Infirmière diplômée d'État de l'Institut de Formation aux Carrières de Santé,
-                    je vous accompagne avec des soins infirmiers professionnels ainsi que des thérapies
-                    naturelles (hijama) pour votre santé et votre bien-être.
-                </p>
-                <p style="margin-top:15px;">
-                    Mon approche allie rigueur médicale et douceur, pour un accompagnement personnalisé
-                    à domicile, dans le respect et le confort de chacun.
-                </p>
-            </div>
         </div>
-    </section>
-
-    <section style="background:#f0ede6;">
-        <div class="section-title">
-            <h2>Nos Services</h2>
-            <div class="line"></div>
+        <div class="about-text">
+            <p>
+                Infirmière diplômée d'État de l'Institut de Formation aux Carrières de Santé,
+                j'accompagne chaque personne avec des soins infirmiers rigoureux ainsi que des
+                thérapies naturelles ancestrales — la hijama — pour restaurer équilibre et vitalité.
+            </p>
+            <p>
+                Mon approche allie précision médicale et douceur humaine, dans le cadre apaisant
+                de votre propre domicile.
+            </p>
+            <div class="signature">— Be Healthy</div>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <img src="https://images.pexels.com/photos/7446776/pexels-photo-7446776.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Soins infirmiers">
-                <div class="content">
-                    <div class="service-fr">Soins infirmiers</div>
-                    <div class="service-ar">العلاجات التمريضية</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.pexels.com/photos/11894617/pexels-photo-11894617.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hijama thérapeutique">
-                <div class="content">
-                    <div class="service-fr">Hijama thérapeutique</div>
-                    <div class="service-ar">الحجامة العلاجية</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.pexels.com/photos/8312867/pexels-photo-8312867.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Hijama relaxante">
-                <div class="content">
-                    <div class="service-fr">Hijama relaxante</div>
-                    <div class="service-ar">الحجامة الاسترخائية</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://images.pexels.com/photos/8312870/pexels-photo-8312870.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Cupping therapy">
-                <div class="content">
-                    <div class="service-fr">Cupping therapy</div>
-                    <div class="service-ar">العلاج بالكؤوس</div>
-                </div>
-            </div>
-            <div class="service-card">
-                <img src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-digestive-system-163714_1280.jpg" alt="Colopathie">
-                <div class="content">
-                    <div class="service-fr">Prise en charge de la colopathie</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <div class="quote">
-        <p>"Prendre soin de son corps, c'est prendre soin de son âme."</p>
-        <div class="arabic">العناية بالجسد عناية بالروح</div>
     </div>
+</section>
 
-    <section>
-        <div class="section-title">
-            <h2>Contact</h2>
-            <div class="line"></div>
+<section id="services" class="services-bg">
+    <div class="section-title">
+        <span class="eyebrow">Nos prestations</span>
+        <h2 style="color:#fff;">Nos Services</h2>
+        <div class="line"></div>
+    </div>
+    <div class="services-grid">
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/7446776/pexels-photo-7446776.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Soins infirmiers">
+            <div class="content">
+                <div class="service-fr">Soins infirmiers</div>
+                <div class="service-ar">العلاجات التمريضية</div>
+            </div>
         </div>
-        <div class="contact-box">
-            <p style="font-size:1.2em;">Pour une consultation ou une prise de rendez-vous à domicile :</p>
-            <a href="tel:+212647932044">📞 06 47 93 20 44</a>
-            <p style="margin-top:20px; color:#888;">Maroc</p>
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/11894617/pexels-photo-11894617.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Hijama thérapeutique">
+            <div class="content">
+                <div class="service-fr">Hijama thérapeutique</div>
+                <div class="service-ar">الحجامة العلاجية</div>
+            </div>
         </div>
-    </section>
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/8312867/pexels-photo-8312867.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Hijama relaxante">
+            <div class="content">
+                <div class="service-fr">Hijama relaxante</div>
+                <div class="service-ar">الحجامة الاسترخائية</div>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://images.pexels.com/photos/8312870/pexels-photo-8312870.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Cupping therapy">
+            <div class="content">
+                <div class="service-fr">Cupping therapy</div>
+                <div class="service-ar">العلاج بالكؤوس</div>
+            </div>
+        </div>
+        <div class="service-card">
+            <img src="https://cdn.pixabay.com/photo/2013/07/18/10/59/human-digestive-system-163714_1280.jpg" alt="Colopathie">
+            <div class="content">
+                <div class="service-fr">Prise en charge de la colopathie</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        &copy; 2026 Be Healthy - لمسة شفاء. Tous droits réservés.
-    </footer>
+<div class="quote">
+    <div class="mark">“</div>
+    <p>Prendre soin de son corps, c'est prendre soin de son âme.</p>
+    <div class="arabic">العناية بالجسد عناية بالروح</div>
+</div>
+
+<section id="contact" class="contact-section" style="max-width:none;">
+    <div class="section-title">
+        <span class="eyebrow">Nous contacter</span>
+        <h2>Réservez votre soin</h2>
+        <div class="line"></div>
+    </div>
+    <p class="lead">Pour une consultation ou une prise de rendez-vous à domicile, contactez-nous directement.</p>
+    <a href="tel:+212647932044" class="phone">06 47 93 20 44</a>
+    <div class="location">Maroc</div>
+</section>
+
+<footer>
+    &copy; 2026 Be Healthy — لمسة شفاء. Tous droits réservés.
+</footer>
+
+<script>
+    window.addEventListener('scroll', () => {
+        document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
+    });
+</script>
 
 </body>
 </html>
